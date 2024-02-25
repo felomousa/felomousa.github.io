@@ -1,19 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Felo Mousa</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparent Card with Gradient</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-<div class="circle-container">
-    <img src="images/Transparent cutout.png">
+  <div id="particles-js"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+        console.log('Particles.js config loaded');
+      });
+    });
+  </script>
+
+  <div class=".background_card">
+    <div class="card">
+      <div class="card-content">
+        <h1>FELO MOUSA</h1>
+        <p>
+        I'm Felo Mousa, a first-year engineering student at Simon Fraser University 
+        with a keen interest in computer engineering. My academic journey is fueled by
+        a passion for understanding and innovating within the realm of technology. 
+        As I navigate through the challenging and stimulating curriculum, I'm committed to developing a solid foundation in engineering principles, 
+        coupled with practical skills in problem-solving and system design. My goal is to harness these skills to make meaningful contributions to the field of computer engineering, 
+        aiming to create solutions that are not only efficient but also impactful in the broader context of society.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="terminal-container">
+    <div class="terminal-header">
+        <span class="terminal-logo">Felo's Terminal</span>
+        <span class="terminal-prompt">~</span>
+    </div>
+    <div class="terminal-output">
+        <p>Last login: Tue Feb 20 17:24:15 on ttys000</p>
+        <p>[felomousa@Felos-MacBook-Air ~ %]</p>
+    </div>
+    <div class="terminal-input">
+        <input type="text" placeholder="Type your command here...">
+    </div>
 </div>
 
-<script src="script.js"></script>
 </body>
 </html>
-
