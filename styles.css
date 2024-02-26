@@ -41,7 +41,7 @@ padding: 10px;
     padding: 20px;
     background-color: #1E1E1E;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .red {
@@ -80,13 +80,11 @@ padding: 10px;
 }
 
 pre {
-    margin: 0px;
-    white-space: pre-wrap;
-    word-break: break-word;
-    font: 'Monaco';
-    color: white;
-    justify-content: left;
-}
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+  }
 
 a:link {
     color: white;
@@ -111,4 +109,13 @@ a:hover{
 .prompt{
     display:inline;
     color:#FFA30E;
+}
+
+.terminaltext {
+    margin: 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font: 'Monaco';
+    color: white;
+    
 }
