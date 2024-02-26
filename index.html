@@ -1,42 +1,66 @@
-document.addEventListener('DOMContentLoaded', function () {
-const toggle = document.getElementById('darkModeToggle');
+<!DOCTYPE html>
+<html lang="en">
 
-function updateColors() {
-let isDarkMode = !toggle.checked; // Assuming that checked means light mode here, adjust as necessary
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Felo Mousa</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="toggle.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <script src="script.js"></script>
+</head>
 
-// Update background and text colors as before
-document.documentElement.style.backgroundColor = isDarkMode ? '#000000' : '#FFA30E';
-document.body.style.backgroundColor = isDarkMode ? '#000000' : '#FFA30E';
+<body>
+   <div class="terminalcard">
+      <div class="title-bar">
+         <div class="red"></div>
+         <div class="yellow"></div>
+         <div class="green"></div>
+         <span style="justify-content:center">felomousa@felos-portfolio -zsh</span>
+         <main><input id="darkModeToggle" class="l" type="checkbox" checked></main>
+      </div>
+      <div class="terminalcontent">
+         <pre>
+ ______   ______     __         ______        __    __     ______     __  __     ______     ______    
+/\  ___\ /\  ___\   /\ \       /\  __ \      /\ "-./  \   /\  __ \   /\ \/\ \   /\  ___\   /\  __ \   
+\ \  __\ \ \  __\   \ \ \____  \ \ \/\ \     \ \ \-./\ \  \ \ \/\ \  \ \ \_\ \  \ \___  \  \ \  __ \  
+ \ \_\    \ \_____\  \ \_____\  \ \_____\     \ \_\ \ \_\  \ \_____\  \ \_____\  \/\_____\  \ \_\ \_\ 
+  \/_/     \/_____/   \/_____/   \/_____/      \/_/  \/_/   \/_____/   \/_____/   \/_____/   \/_/\/_/ 
+         </pre>
+         <div class="terminaltext">
+            <p>
+            <div class="prompt">felomousa@felos-portfolio ~ %</div> cat aboutme.txt
+            <br>
+            I'm Felo Mousa! A first-year engineering student at Simon Fraser University with a keen interest in computer
+            engineering. My academic journey is fueled by a passion for understanding and innovating within the realm of
+            technology. As I navigate through the challenging and stimulating curriculum, I'm committed to developing a
+            solid foundation in engineering principles, coupled with practical skills in problem-solving and system
+            design. My goal is to harness these skills to make meaningful contributions to the field of computer
+            engineering, aiming to create solutions that are not only efficient but also impactful in the broader
+            context of society.
+            </p>
+            <br>
+            <div class="prompt">felomousa@felos-portfolio ~ %</div> cat resources.txt
+            <div class="resources">
+               <a href="https://github.com/felomousa/" target="_blank"><i class="fa fa-github"
+                     style="color:white"></i>Github</a>
+               <br>
+               <a href="https://www.linkedin.com/in/felomousa/" target="_blank"><i class="fa fa-linkedin"
+                     style="color:#0077b5"></i>LinkedIn</a>
+               <br>
+               <a href="resume.pdf" target="_blank"><i class="fa fa-file-pdf-o" style="color:#FFA30E"></i>Resume</a>
+               <br>
+               <br>
+            </div>
+            <div class="prompt">felomousa@felos-portfolio ~ %</div><span class="cursor"> </span>
+         </div>
+      </div>
+</body>
 
-const elementsWithColor = document.querySelectorAll('pre, .prompt');
-elementsWithColor.forEach(el => {
-el.style.color = isDarkMode ? '#0c0b2e' : '#FFA30E';
-});
-
-// Update icon colors
-const resumeIcon = document.querySelector('.fa-file-pdf-o');
-if (resumeIcon) {
-resumeIcon.style.color = isDarkMode ? '#FFFFFF' : '#FFA30E'; // Change to white in dark mode, back to orange in light
-mode
-}
-
-// Optionally, update other icons as needed
-const githubIcon = document.querySelector('.fa-github');
-const linkedinIcon = document.querySelector('.fa-linkedin');
-if (githubIcon) {
-githubIcon.style.color = isDarkMode ? '#FFFFFF' : 'initial'; // Assuming you want white in dark mode, and default in
-light
-}
-if (linkedinIcon) {
-linkedinIcon.style.color = isDarkMode ? '#FFFFFF' : '#0077b5'; // LinkedIn blue in light mode, white in dark mode
-}
-}
-
-// Check and apply on load
-updateColors();
-
-// Toggle change listener
-toggle.addEventListener('change', function () {
-updateColors();
-});
-});
+</html>
