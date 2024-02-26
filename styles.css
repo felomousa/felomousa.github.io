@@ -40,7 +40,6 @@ padding: 10px;
 .terminalcontent{
     padding: 20px;
     background-color: #1E1E1E;
-    display: flex;
     justify-content: space-evenly;
 }
 
