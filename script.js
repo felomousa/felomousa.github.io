@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       linkedinIcon.style.color = isDarkMode ? '#0077b5' : '#0077b5';
     }
     if (resumeIcon) {
-      resumeIcon.style.color = isDarkMode ? '#0f1138' : '#FFA30E';
+      resumeIcon.style.color = isDarkMode ? '#8f82ff' : '#FFA30E';
     }
   }
 
