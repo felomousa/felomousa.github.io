@@ -1,12 +1,12 @@
 body, html {
-height: 100%;
-margin: 0;
-background-color: #FFA30E; 
-justify-content: center;
-align-items: center;
-display: flex;
-color: #fff;
-padding: 10px;
+    height: 100%;
+    margin: 0;
+    background-color: #FFA30E; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    padding: 10px;
 }
 
 .terminalcard {
@@ -40,7 +40,7 @@ padding: 10px;
 .terminalcontent{
     padding: 20px;
     background-color: #1E1E1E;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .red {
@@ -99,7 +99,6 @@ a:hover{
     color: grey;
 }
 
-
 .resources{
     line-height: 1.4;
     font: 'Monaco';
@@ -108,13 +107,4 @@ a:hover{
 .prompt{
     display:inline;
     color:#FFA30E;
-}
-
-.terminaltext {
-    margin: 0px;
-    white-space: pre-wrap;
-    word-break: break-word;
-    font: 'Monaco';
-    color: white;
-    
 }
