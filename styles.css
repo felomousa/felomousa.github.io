@@ -15,16 +15,17 @@ html {
 }
 
 .terminalcard {
-    background-color: #1E1F1D;
+    background-color: rgba(30, 31, 29, 0.9);
     width: auto;
     height: auto;
     margin: 20px auto;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0 2px #FFA30E;
     border-radius: 10px;
     min-width: 700px;
     padding-bottom: 10px;
     max-width: 80%;
 }
+
 
 .title-bar {
     background-color: #3B3939;
@@ -57,7 +58,6 @@ html {
 
 .terminalcontent {
     padding: 20px;
-    background-color: #1E1E1E;
     justify-content: space-between;
 }
 
