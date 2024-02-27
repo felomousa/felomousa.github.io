@@ -4,29 +4,35 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateColors() {
     let isDarkMode = !toggle.checked;
 
-
-    document.documentElement.style.backgroundColor = isDarkMode ? '#0f1138' : '#FFA30E';
-    document.body.style.backgroundColor = isDarkMode ? '#0f1138' : '#FFA30E';
+    const daytime = '#eddcd2';
+    const nighttime = '#1E1E1E';
+    const fontnight = '#a914fe';
+    const fontday = '#fd142c';
+    document.documentElement.style.backgroundColor = isDarkMode ? nighttime : daytime;
+    document.body.style.backgroundColor = isDarkMode ? nighttime : daytime;
 
     const elementsWithColor = document.querySelectorAll('pre, .prompt');
     elementsWithColor.forEach(el => {
-      el.style.color = isDarkMode ? '#8f82ff' : '#FFA30E';
+      el.style.color = isDarkMode ? fontnight : fontday;
     });
 
-    // Update icon colors
-    const resumeIcon = document.querySelector('.fa-file-pdf-o');
-    if (resumeIcon) {
-      resumeIcon.style.color = isDarkMode ? '#FFFFFF' : '#FFA30E'; // Change to white in dark mode, back to orange in light mode
+    // Update terminal card outline color
+    const terminalCard = document.querySelector('.terminalcard');
+    if (terminalCard) {
+      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontnight}` : `0 0 0 4px ${fontday}`;
     }
 
-    // Optionally, update other icons as needed
     const githubIcon = document.querySelector('.fa-github');
     const linkedinIcon = document.querySelector('.fa-linkedin');
+    const resumeIcon = document.querySelector('.fa-file-pdf-o');
+    if (resumeIcon) {
+      resumeIcon.style.color = isDarkMode ? fontnight : fontday;
+    }
     if (githubIcon) {
-      githubIcon.style.color = isDarkMode ? '#FFFFFF' : 'initial'; // Assuming you want white in dark mode, and default in light
+      githubIcon.style.color = isDarkMode ? fontnight : fontday;
     }
     if (linkedinIcon) {
-      linkedinIcon.style.color = isDarkMode ? '#FFFFFF' : '#0077b5'; // LinkedIn blue in light mode, white in dark mode
+      linkedinIcon.style.color = isDarkMode ? fontnight : fontday;
     }
   }
 
