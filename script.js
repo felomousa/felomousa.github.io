@@ -1,3 +1,7 @@
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  window.location.href = "/mobile/index.html";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('darkModeToggle');
 
@@ -44,3 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateColors();
   });
 });
+
+
+
