@@ -6,12 +6,13 @@ body,
 html {
     height: 90%;
     margin: 0;
-    background-color: #FFA30E;
+    background-color: #202020;
     justify-content: center;
     align-items: center;
     display: flex;
     color: #fff;
     padding: 10px;
+    transition: background-color 0.6s ease;
 }
 
 .terminalcard {
