@@ -24,7 +24,7 @@ html {
     font-weight: bold;
     margin-top: 0;
     line-height: 0.8;
-    text-shadow: 6px 6px 0px rgba(0, 0, 0, .4);
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, .2);
 }
 
 .description {
@@ -45,7 +45,7 @@ html {
 
 .work {
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
+    font-weight: 4;
     font-size: large;
 }
 
@@ -60,7 +60,7 @@ html {
     font-weight: bolder;
     font-size: 30px;
     background-color: #202020;
-    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
     text-decoration: none;
     padding: 1px 6px;
     margin: 10px 0;
