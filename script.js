@@ -7,45 +7,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function updateColors() {
     let isDarkMode = !toggle.checked;
-
     const daytime = '#FFA30E';
     const nighttime = '#202020';
-    const fontnight = '#FFA30E';
-    const fontday = '#FFA30E';
+    const fontColor = '#FFA30E';
     document.documentElement.style.backgroundColor = isDarkMode ? nighttime : daytime;
     document.body.style.backgroundColor = isDarkMode ? nighttime : daytime;
 
     const elementsWithColor = document.querySelectorAll('pre, .prompt');
     elementsWithColor.forEach(el => {
-      el.style.color = isDarkMode ? fontnight : fontday;
+      el.style.color = isDarkMode ? fontColor : fontColor;
     });
 
     const terminalCard = document.querySelector('.terminalcard');
     if (terminalCard) {
-      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontnight}` : `0 0 0 4px #FFA30E`;
+      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontColor}` : `0 0 0 4px ${fontColor}`;
     }
 
-    const githubIcon = document.querySelector('.fa-github');
-    const linkedinIcon = document.querySelector('.fa-linkedin');
-    const resumeIcon = document.querySelector('.fa-file-pdf-o');
-    if (resumeIcon) {
-      resumeIcon.style.color = isDarkMode ? fontnight : fontday;
-    }
-    if (githubIcon) {
-      githubIcon.style.color = isDarkMode ? fontnight : fontday;
-    }
-    if (linkedinIcon) {
-      linkedinIcon.style.color = isDarkMode ? fontnight : fontday;
-    }
+    const icons = document.querySelectorAll('.fa-github, .fa-linkedin, .fa-file-pdf-o');
+    icons.forEach(icon => {
+      icon.style.color = isDarkMode ? fontColor : fontColor;
+    });
   }
 
   updateColors();
-
-
-  toggle.addEventListener('change', function () {
-    updateColors();
-  });
+  toggle.addEventListener('change', updateColors);
 });
-
-
-
