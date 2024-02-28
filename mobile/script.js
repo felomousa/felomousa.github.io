@@ -11,17 +11,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const darkThemeStyles = {
             backgroundColor: '#202020',
             textColor: 'white',
-            buttonBackgroundColor: 'rgba(255, 163, 14, 0.1)',
-            buttonTextColor: 'white',
-            buttonBorderColor: '2px solid rgba(255, 163, 14, 0.8)',
+            buttonBackgroundColor: 'rgba(255, 255, 255, 1)',
+            buttonTextColor: 'black',
+            buttonBorderColor: '3px solid rgba(16, 16, 16, 0.5)',
         };
 
         const lightThemeStyles = {
             backgroundColor: '#FFA30E',
             textColor: 'black',
-            buttonBackgroundColor: 'rgba(0, 0, 0, 0.12)',
+            buttonBackgroundColor: 'rgba(255, 255, 255, 1)',
             buttonTextColor: 'black',
-            buttonBorderColor: '2px solid rgba(0, 0, 0, 0.6)',
+            buttonBorderColor: '3px solid rgba(191, 118, 0, 1)',
         };
 
         const themeStyles = prefersDarkMode ? darkThemeStyles : lightThemeStyles;
