@@ -73,7 +73,6 @@ main {
     height: 1em;
 }
 
-/* Checked */
 .l:checked {
     background-color: rgba(0, 0, 0, 0.45);
     box-shadow: 0.125em 0.125em 0 0.125em rgba(0, 0, 0, 0.1) inset;
@@ -89,8 +88,6 @@ main {
     transform: translateX(-2.5%) rotateY(180deg);
 }
 
-/* Other States */
 .l:focus {
-    /* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
     outline: 0;
 }
