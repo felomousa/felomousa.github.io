@@ -5,30 +5,41 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('darkModeToggle');
 
-  function updateColors() {
-    let isDarkMode = !toggle.checked;
+  function updateColors(isDarkMode) {
     const daytime = '#FFA30E';
     const nighttime = '#202020';
     const fontColor = '#FFA30E';
     document.documentElement.style.backgroundColor = isDarkMode ? nighttime : daytime;
     document.body.style.backgroundColor = isDarkMode ? nighttime : daytime;
 
-    const elementsWithColor = document.querySelectorAll('pre, .prompt');
-    elementsWithColor.forEach(el => {
-      el.style.color = isDarkMode ? fontColor : fontColor;
+    document.querySelectorAll('pre, .prompt').forEach(el => {
+      el.style.color = fontColor;
     });
 
     const terminalCard = document.querySelector('.terminalcard');
     if (terminalCard) {
-      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontColor}` : `0 0 0 4px ${fontColor}`;
+      terminalCard.style.boxShadow = `0 0 0 4px ${fontColor}`;
     }
 
-    const icons = document.querySelectorAll('.fa-github, .fa-linkedin, .fa-file-pdf-o');
-    icons.forEach(icon => {
-      icon.style.color = isDarkMode ? fontColor : fontColor;
+    document.querySelectorAll('.fa-github, .fa-linkedin, .fa-file-pdf-o').forEach(icon => {
+      icon.style.color = fontColor;
     });
   }
 
-  updateColors();
-  toggle.addEventListener('change', updateColors);
+  function prefersDarkMode() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
+  const userPrefersDark = prefersDarkMode();
+  toggle.checked = !userPrefersDark;
+  updateColors(userPrefersDark);
+
+  toggle.addEventListener('change', function () {
+    updateColors(!toggle.checked);
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    toggle.checked = !event.matches;
+    updateColors(event.matches);
+  });
 });

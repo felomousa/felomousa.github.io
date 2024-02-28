@@ -39,7 +39,6 @@ p {
     height: auto;
     margin: 0 auto;
     display: block;
-    filter: drop-shadow(3px 0px 5px rgba(0, 0, 0, 0.6))
 }
 
 .button-container .button {
@@ -60,7 +59,6 @@ p {
 .button-container .button i {
     margin-right: 1vw;
     color: black;
-    /* Icon color */
 }
 
 .button-container .button:hover {
