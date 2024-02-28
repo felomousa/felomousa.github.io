@@ -3,48 +3,42 @@ document.addEventListener('DOMContentLoaded', function () {
         const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
         const bodyElement = document.body;
-        const textElements = document.querySelectorAll('.text, h1, p');
-        const profileImage = document.querySelector('.profile-image');
-        const buttons = document.querySelectorAll('.button');
-        const buttonIcons = document.querySelectorAll('.button i');
+        const textElements = document.querySelectorAll('.name, .description, .hey, .work, h1, p'); // Targeting text elements
+        // Exclude buttons from the global text color change, as they have specific inline styles
 
         const darkThemeStyles = {
             backgroundColor: '#202020',
-            textColor: 'white',
-            buttonBackgroundColor: 'rgba(255, 255, 255, 1)',
-            buttonTextColor: 'black',
-            buttonBorderColor: '3px solid rgba(16, 16, 16, 0.5)',
+            textColor: '#FFA500',
+            buttonBackgroundColor: 'white',
         };
 
         const lightThemeStyles = {
-            backgroundColor: '#FFA30E',
+            backgroundColor: '#FFA500',
             textColor: 'black',
-            buttonBackgroundColor: 'rgba(255, 255, 255, 1)',
-            buttonTextColor: 'black',
-            buttonBorderColor: '3px solid rgba(191, 118, 0, 1)',
+            buttonBackgroundColor: 'white',
         };
 
         const themeStyles = prefersDarkMode ? darkThemeStyles : lightThemeStyles;
 
+        // Apply background color to body
         bodyElement.style.backgroundColor = themeStyles.backgroundColor;
         bodyElement.style.color = themeStyles.textColor;
-        profileImage.style.filter = themeStyles.profileImageFilter;
 
+        // Apply text color to all targeted text elements, excluding buttons with specific colors
         textElements.forEach(element => {
             element.style.color = themeStyles.textColor;
         });
 
-        buttons.forEach(button => {
+        // Apply background and border styles to buttons, but not text color
+        document.querySelectorAll('.button').forEach(button => {
             button.style.backgroundColor = themeStyles.buttonBackgroundColor;
-            button.style.color = themeStyles.buttonTextColor;
             button.style.border = themeStyles.buttonBorderColor;
-        });
-        buttonIcons.forEach(icon => {
-            icon.style.color = themeStyles.iconColor;
+            // Not changing the button text color as per user requirement
         });
     }
 
     applyPreferredColorScheme();
 
+    // Re-apply theme when the preferred color scheme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyPreferredColorScheme);
 });
