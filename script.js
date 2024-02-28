@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateColors() {
     let isDarkMode = !toggle.checked;
 
-    const daytime = '#edd2d2';
+    const daytime = '#FFA30E';
     const nighttime = '#202020';
-    const fontnight = '#a914fe';
-    const fontday = '#f21b32';
+    const fontnight = '#FFA30E';
+    const fontday = '#FFA30E';
     document.documentElement.style.backgroundColor = isDarkMode ? nighttime : daytime;
     document.body.style.backgroundColor = isDarkMode ? nighttime : daytime;
 
@@ -20,10 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
       el.style.color = isDarkMode ? fontnight : fontday;
     });
 
-    // Update terminal card outline color
     const terminalCard = document.querySelector('.terminalcard');
     if (terminalCard) {
-      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontnight}` : `0 0 0 4px ${fontday}`;
+      terminalCard.style.boxShadow = isDarkMode ? `0 0 0 4px ${fontnight}` : `0 0 0 4px #FFA30E`;
     }
 
     const githubIcon = document.querySelector('.fa-github');
@@ -40,10 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Check and apply on load
   updateColors();
 
-  // Toggle change listener
+
   toggle.addEventListener('change', function () {
     updateColors();
   });
