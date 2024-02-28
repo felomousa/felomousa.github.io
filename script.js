@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateColors(isDarkMode) {
     const daytime = '#FFA30E';
     const nighttime = '#202020';
-    const fontColor = '#FFA30E';
+    const fontColor = isDarkMode ? '#8900f2' : daytime;
     document.documentElement.style.backgroundColor = isDarkMode ? nighttime : daytime;
     document.body.style.backgroundColor = isDarkMode ? nighttime : daytime;
 
