@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const lightThemeStyles = {
             backgroundColor: '#FFA500',
-            textColor: 'black',
+            textColor: 'white',
             buttonBackgroundColor: 'white',
         };
 
