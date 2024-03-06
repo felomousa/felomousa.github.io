@@ -55,6 +55,12 @@ html {
     align-items: flex-start;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 8vh;
+}
+
 .button {
     font-family: "Roboto", sans-serif;
     font-weight: bolder;
