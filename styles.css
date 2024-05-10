@@ -19,8 +19,17 @@ html {
 #letterM {
     display: inline-block;
     transition: transform 0.5s;
-    font-family: "Bebas Neue", sans-serif;
-    font-size: 1000px;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 15vw;
     font-style: normal;
-    letter-spacing: -40px;
+}
+
+
+#spacer {
+    height: 80vh;
+}
+
+#intro {
+    font-family: "Roboto Slab", serif;
+    font-size: 10vh;
 }

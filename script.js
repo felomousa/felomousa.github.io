@@ -1,10 +1,13 @@
+document.body.style.height = '222vh';
+
 document.addEventListener('scroll', function () {
-    const scrollPosition = window.scrollY;
+    const currentScrollY = window.scrollY;
     const letterF = document.getElementById('letterF');
     const letterM = document.getElementById('letterM');
+    const maxScrollThreshold = 10 * window.innerHeight / 100;
 
-    letterF.style.transform = `translateX(${-scrollPosition}px)`;
-    letterM.style.transform = `translateX(${scrollPosition}px)`;
+    let effectiveScrollY = Math.min(currentScrollY, maxScrollThreshold);
+
+    letterF.style.transform = `translateX(${-effectiveScrollY}vh)`;
+    letterM.style.transform = `translateX(${effectiveScrollY}vh)`;
 });
-
-document.body.style.height = '200vh';
