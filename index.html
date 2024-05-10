@@ -21,9 +21,41 @@
         </div>
 
         <div id="spacer"></div>
-        <div id="intro"> my recent work,</div>
-        <h2><a href="https://github.com/username/repository1">Mt R</a></h2>
-        <p>Some of</p>
+        <div id="work">
+            <div id="intro"> my recent work,</div>
+            <br>
+            <h1><a href="https://github.com/felomousa/SpotifyDisplay">led display</a></h1>
+            <p>192 by 32 pixels is definetely not a lot of screen real-estate to display meaningful information, but
+                below are three mini-projects that did just that, developed on a raspberry pi. (placeholder)</p>
+            <p> skills: yadadadad</p>
+
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>8-bit spotify (python)</h3>
+                    <IMG SRC="media/spotify_display.gif">
+                    <p>using spotify's api, a user's currently playing song is securely fetched along with the title &
+                        artist. the song's album cover is then downscaled to fit the led matrix, and is displayed
+                        alongside a progress bar that is accurate to ± 1 second. </p>
+                    <h4>tldr: opencv, requests, pillow & api</h4>
+                </div>
+                <div class="grid-item">
+                    <h3>minecraft display (java & python) </h3>
+                    <IMG SRC="media/health.gif">
+                    <p>using minecraft's modding platform, fabric, in-game updates are posted to a local webserver upon
+                        the pre-determined trigger. the raspberry pi then fetches the health update and displays it via
+                        heart icons on the led matrix.</p>
+                    <h4>tldr: thread optimization, requests, opencv, pillow & local webservers</h4>
+                </div>
+                <div class="grid-item">
+                    <h3>clock (python)</h3>
+                    <IMG SRC="media/time.gif">
+                    <p>as simple as it gets, but perhaps the most practical. displays the current date & time as well as
+                        an animated progress bar showing what % of the day remained. </p>
+                    <h4>extremely overpriced alarm-clock replacement. looks pretty though 3:</h4>
+                </div>
+                <h1><a href="https://github.com/felomousa/SpotifyDisplay">price scraper</a></h1>
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

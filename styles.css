@@ -4,6 +4,7 @@ html {
     margin: 0;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 #container {
@@ -26,10 +27,43 @@ html {
 
 
 #spacer {
-    height: 80vh;
+    height: 100vh;
 }
 
 #intro {
     font-family: "Roboto Slab", serif;
     font-size: 10vh;
+    line-height: 9vh;
+}
+
+#work {
+    padding: 1vh;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 3fr);
+    gap: 10px;
+    width: 30%;
+}
+
+.grid-item {
+    padding: 50px;
+    position: relative;
+}
+
+.grid-item::before {
+    content: "";
+    position: absolute;
+    left: 0.7vh;
+    top: 20%;
+    height: 70%;
+    width: 4px;
+    background-color: black;
+}
+
+.grid-item img {
+    width: 50%;
+    height: auto;
 }
