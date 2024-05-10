@@ -1,4 +1,4 @@
-document.body.style.height = '250vh';
+document.body.style.height = '255vh';
 
 document.addEventListener('scroll', function () {
     const currentScrollY = window.scrollY;

@@ -1,10 +1,12 @@
-body,
 html {
     height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
     overflow-x: hidden;
+}
+
+body {
     font-family: "Roboto Slab", sans-serif;
+    height: 100%;
 }
 
 #container {
@@ -20,50 +22,82 @@ html {
 #letterM {
     display: inline-block;
     transition: transform 0.5s;
-    font-family: "Roboto Slab", sans-serif;
     font-size: 15vw;
     font-style: normal;
 }
-
 
 #spacer {
     height: 100vh;
 }
 
 #intro {
-    font-family: "Roboto Slab", serif;
-    font-size: 10vh;
-    line-height: 9vh;
+    font-size: 6vh;
+    line-height: 5vh;
 }
 
 #work {
-    padding: 1vh;
-    font-family: "Roboto Slab", sans-serif;
+    padding: 4%;
+    font-size: 16px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(1, 3fr);
+    grid-template-columns: 1fr;
     gap: 10px;
-    width: 30%;
+    width: 100%;
 }
 
 .grid-item {
-    padding: 50px;
     position: relative;
+    padding: 20px;
+    font-size: 16px;
 }
 
 .grid-item::before {
     content: "";
     position: absolute;
-    left: 0.7vh;
-    top: 20%;
-    height: 70%;
+    left: 0;
+    top: 10%;
+    height: 80%;
     width: 4px;
     background-color: black;
 }
 
 .grid-item img {
-    width: 50%;
+    width: 100%;
     height: auto;
+}
+
+@media (min-width: 768px) {
+
+    #intro,
+    #work #intro {
+        font-size: 10vh;
+        line-height: 9vh;
+    }
+
+    #work {
+        font-size: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 3fr);
+        width: 50%;
+    }
+
+    .grid-item {
+        padding: 50px;
+        font-size: 18px;
+    }
+
+    .grid-item::before {
+        left: 2vh;
+        top: 17%;
+        height: 70%;
+    }
+
+    #letterF,
+    #letterM {
+        font-size: 15vw;
+    }
 }
