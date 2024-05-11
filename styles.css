@@ -101,3 +101,17 @@ body {
         font-size: 15vw;
     }
 }
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #A594F9;
+}
