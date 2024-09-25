@@ -1,0 +1,65 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+a {
+    color: #ff9c39;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff3939;
+}
+
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.project-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project-item {
+    margin-bottom: 40px;
+}
+
+.project-description {
+    margin-top: 10px;
+    font-size: 0.9em;
+    line-height: 1.6;
+}

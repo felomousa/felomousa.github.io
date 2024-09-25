@@ -3,76 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felo Mousa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>fgm</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <div id="container">
-            <span id="letterF">felo</span>
-            <span id="letterM">mousa</span>
-        </div>
-
-        <div id="spacer"></div>
-        <div id="work">
-            <div id="intro"> my recent work,</div>
-            <br>
-            <div class="grid-container">
-                <h1><a href="https://github.com/felomousa/SpotifyDisplay">led display</a></h1>
-                <div id="description">192 by 32 pixels is definetely not a lot of screen real-estate to display
-                    meaningful information, but
-                    below are three mini-projects that did just that, developed on a raspberry pi.</div>
-                <div class="grid-item">
-                    <h3>8-bit spotify (python)</h3>
-                    <IMG SRC="media/spotify_display.gif">
-                    <p>using spotify's api, a user's currently playing song is securely fetched along with the title &
-                        artist. the song's album cover is then downscaled to fit the led matrix, and is displayed
-                        alongside a progress bar that is accurate to ± 1 second. </p>
-                    <h4>tldr: opencv, requests, pillow & api</h4>
-                </div>
-                <div class="grid-item">
-                    <h3>minecraft display (java & python) </h3>
-                    <IMG SRC="media/health.gif">
-                    <p>using minecraft's modding platform, fabric, in-game updates are posted to a local webserver upon
-                        the pre-determined trigger. the raspberry pi then fetches the health update and displays it via
-                        heart icons on the led matrix.</p>
-                    <h4>tldr: thread optimization, requests, opencv, pillow & local webservers</h4>
-                </div>
-                <div class="grid-item">
-                    <h3>clock (python)</h3>
-                    <IMG SRC="media/time.gif">
-                    <p>as simple as it gets, but perhaps the most practical. displays the current date & time as well as
-                        an animated progress bar showing what % of the day remained. </p>
-                    <h4>extremely overpriced alarm-clock replacement. looks pretty though 3:</h4>
-                </div>
-                <h1><a href="https://github.com/felomousa/BazaarTracker">virtual trading ui</a></h1>
-                <div id="description">rather than playing the game, i spent countless nights figuring out the best way
-                    to earn in-game currency. i learned to use datatables to display data and created a normalized
-                    points rating system to identify winning items. i also built backend logic with flask and integrated
-                    apis for real-time data updates. this resulted in a simple, responsive web app that lets gamers see
-                    market trends and analyze their trades easily. </div>
-                <h4> tldr: datatables, flask, python, javascript, apis, backend, frontend</h4>
-            </div>
-            <br>
-            <div id="intro">more of me,</div>
-            <br>
-            <h2><a href="https://linkedin.com/in/felomousa">linkedin</a></h4>
-                <h2><a href="https://github.com/felomousa">github</a></h4>
-                    <a href="media/resume.pdf" target="_blank">
-                        <h2>resume</h1>
-                    </a>
-
-        </div>
-    </main>
-    <script src="script.js"></script>
+    <div class="container">
+        <nav>
+            <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">linkedin</a>
+            <a href="#projects">projects</a>
+        </nav>
+        <section id="about">
+            <h1>hi, i'm felo</h1>
+            <p>i’m a second-year computer engineering student at Simon Fraser University.</p>
+            <p>my project thesis is pretty straightforward: i find small inconveniences in my day-to-day life and then
+                devote a disproportionate amount of time solving them. toss in a few spontaneous projects, and
+                boom—that’s my <a href="https://github.com/felomousa">github</a>.</p>
+        </section>
+        <section id="projects">
+            <h2>projects</h2>
+            <ul class="project-list">
+                {% for project in site.posts %}
+                <li class="project-item">
+                    <h3>
+                        {% if project.github_link %}
+                        <a href="{{ project.github_link }}" target="_blank">{{ project.title }}</a>
+                        {% else %}
+                        {{ project.title }}
+                        {% endif %}
+                    </h3>
+                    <div class="project-description">
+                        {{ project.content | markdownify }}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
 </body>
 
 </html>
