@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,34 +13,19 @@
 <body>
     <div class="container">
         <nav>
-            <a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">linkedin</a>
-            <a href="#projects">projects</a>
+            <a href="projects.html">projects</a>
+            <a href="https://www.linkedin.com/in/felomousa" target="_blank">linkedin</a>
+            <a href="https://github.com/felomousa/" target="_blank">github</a>
         </nav>
         <section id="about">
-            <h1>hi, i'm felo</h1>
-            <p>i’m a second-year computer engineering student at Simon Fraser University.</p>
-            <p>my project thesis is pretty straightforward: i find small inconveniences in my day-to-day life and then
-                devote a disproportionate amount of time solving them. toss in a few spontaneous projects, and
-                boom—that’s my <a href="https://github.com/felomousa">github</a>.</p>
-        </section>
-        <section id="projects">
-            <h2>projects</h2>
-            <ul class="project-list">
-                {% for project in site.posts %}
-                <li class="project-item">
-                    <h3>
-                        {% if project.github_link %}
-                        <a href="{{ project.github_link }}" target="_blank">{{ project.title }}</a>
-                        {% else %}
-                        {{ project.title }}
-                        {% endif %}
-                    </h3>
-                    <div class="project-description">
-                        {{ project.content | markdownify }}
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
+            <br> <br>
+            <h1>hi, i'm felo 👋🏽</h1>
+            <p>i’m a second-year computer engineering student at Simon Fraser University.</p><br>
+            <p>i find minor inconveniences in my day-to-day life and
+                devote a grossly disproportionate amount of time learning to fix 'em. will the time i save ever make up for the
+                time i spent? <br><br> lol no. <br><br> anyways, toss in a few side <a href="projects.html">projects</a>, and you've
+                pretty much found my <a href="https://github.com/felomousa/" target="_blank">github</a>
+                .</p>
         </section>
     </div>
 </body>

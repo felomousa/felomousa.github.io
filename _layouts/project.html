@@ -1,0 +1,63 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="{{ "/projects.html" | relative_url }}">back to projects</a>
+        </nav>
+
+        <section id="about">
+            <h1>{{ page.title }}</h1>
+            <div style="padding: 10px; font-size: 14px; font-style: italic;">
+                <span style="color:#F39C12;">■</span> Backend & Databases
+                <span style="color:#3498DB;">■</span> API & Libraries
+                <span style="color:#9B59B6;">■</span> Linux
+                <span style="color:#E74C3C;">■</span> Security
+                <span style="color:#2ECC71;">■</span> UI/UX Design
+            </div>
+        </section>
+        <section id="project-details">
+            <div class="project-description">
+                {{ content | markdownify }}
+            </div>
+        </section>
+
+        {% if page.subprojects %}
+        <section id="subprojects">
+            <ul class="subproject-list">
+                {% for subproject in page.subprojects %}
+                <li class="subproject-item">
+                    <h4>
+                        {% if subproject.github_link %}
+                        <a href="{{ subproject.github_link }}" target="_blank">{{ subproject.title }}</a>
+                        {% else %}
+                        {{ subproject.title }}
+                        {% endif %}
+                    </h4>
+                    {% if subproject.gif %}
+                    <div class="subproject-gif">
+                        <img src="{{ subproject.gif | relative_url }}" alt="{{ subproject.title }} GIF">
+                    </div>
+                    {% endif %}
+                    <div class="subproject-description">
+                        {{ subproject.description | markdownify }}
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    </div>
+</body>
+
+</html>
