@@ -72,6 +72,7 @@ li {
     margin-left: 20px;
     list-style-position: outside;
     list-style-type: disc;
+    line-height: 1.8;
 }
 
 .container {
@@ -82,7 +83,7 @@ li {
 }
 
 a {
-    color: #394aff;
+    color: #d092ff;
     text-decoration: none;
     text-decoration: underline;
 }
@@ -90,6 +91,7 @@ a {
 a:hover {
     text-decoration: underline;
     color: #ff3939;
+
 }
 
 h1,
@@ -108,6 +110,7 @@ h1 {
 
 h2 {
     font-size: 2em;
+    line-height: 2;
 }
 
 h3 {
