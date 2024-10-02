@@ -1,9 +1,19 @@
-// Helper function to calculate time ago
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function redirectToMobile() {
+    if (isMobile() && !window.location.href.includes('mobile-index.html')) {
+        window.location.href = 'mobile-index.html';
+    }
+}
+
+redirectToMobile();
+
 function timeAgo(date) {
     const now = new Date();
     const timePlayed = new Date(date);
-    const diff = Math.abs(now - timePlayed); // Difference in milliseconds
-
+    const diff = Math.abs(now - timePlayed);
     const minutes = Math.floor(diff / (1000 * 60));
     const hours = Math.floor(diff / (1000 * 60 * 60));
 
@@ -16,18 +26,14 @@ function timeAgo(date) {
     }
 }
 
-// Fetch data from the Spotify API
 fetch('https://callback.felomousa.com/spotify')
     .then(response => response.json())
     .then(data => {
-        // Update album cover
         document.getElementById('album-cover').src = data.album_cover_url;
 
-        // Update song name, artist name, and album name
         document.getElementById('song-name').textContent = data.song_name;
         document.getElementById('artist-name').textContent = data.artist_name;
 
-        // Calculate and update time played
         document.getElementById('time-ago').textContent = timeAgo(data.time_played);
     })
     .catch(error => {
@@ -35,11 +41,9 @@ fetch('https://callback.felomousa.com/spotify')
     });
 
 
-// Fetch data from the Netflix (Letterboxd) API
 fetch('https://callback.felomousa.com/netflix')
     .then(response => response.json())
     .then(data => {
-        // Update movie title and rating
         document.getElementById('netflix-title').textContent = data.title;
         document.getElementById('netflix-rating').textContent = data.rating;
     })
