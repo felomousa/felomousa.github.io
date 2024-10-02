@@ -26,6 +26,31 @@ function timeAgo(date) {
     }
 }
 
+function updateFinanceData(value) {
+    const financeTitle = document.getElementById('finance-title');
+    financeTitle.textContent = value + '%';
+
+    const numericValue = parseFloat(value);
+    if (!isNaN(numericValue)) {
+        if (numericValue < 0) {
+            financeTitle.style.color = '#FE654F';
+        } else if (numericValue > 0) {
+            financeTitle.style.color = '#2DD881';
+        } else {
+            financeTitle.style.color = 'grey';
+        }
+    }
+}
+
+fetch('https://callback.felomousa.com/finance')
+    .then(response => response.json())
+    .then(data => {
+        updateFinanceData(data.price);
+    })
+    .catch(error => {
+        console.error('Error fetching Finance data:', error);
+    });
+
 fetch('https://callback.felomousa.com/spotify')
     .then(response => response.json())
     .then(data => {
@@ -50,3 +75,17 @@ fetch('https://callback.felomousa.com/netflix')
     .catch(error => {
         console.error('Error fetching Netflix data:', error);
     });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const financeTitle = document.getElementById('finance-title');
+    const value = parseFloat(financeTitle.textContent);
+
+    if (!isNaN(value)) {
+        if (value < 0) {
+            financeTitle.style.color = 'red';
+        } else if (value > 0) {
+            financeTitle.style.color = 'green';
+        }
+    }
+});
