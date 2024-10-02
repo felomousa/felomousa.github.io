@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,38 +18,76 @@
         <section id="about">
             <br> <br>
             <h1>hi, i'm felo 👋🏽</h1> 
-            <p>i'm a second-year <span style="color: #99FF99;">computer engineering</span> student at simon fraser university, focused on <span style="color: #FF9999;">backend development</span>, <span style="color: #99CCFF;">database systems</span>, and finding <span style="color: #99FF99;">unique solutions</span> to everyday problems.</p><br>
+            <p>i'm a second-year computer engineering student at simon fraser university, focused on backend development, database systems, and finding unique solutions to everyday problems.</p><br>
             
+
+            <h2>what i've been up to:</h2>
+            <section id="spotify-status">
+                <div class="spotify-card" style="margin-top: -5px; display: flex; align-items: center;">
+                    <img id="album-cover" src="" alt="Album Cover" style="width: 100px; height: 100px; border-radius: 8px; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-size: 1.2em;">
+                            Last listened to <span id="song-name" style="color: #ED254E; font-weight: bold;">[song]</span> <br>
+                            by <span id="artist-name" style="color: #F9DC5C; font-weight: bold;">[artist]</span> 
+                        </p>
+                        <p style="margin: 0; font-size: 0.9em; color: #999;">
+                            Played <span id="time-ago" style="color: #ed2575; font-weight: bold;">[time ago]</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="netflix-status">
+                <div class="netflix-card" style="border-radius: 12px; margin-top: 10px; display: flex; align-items: center;">
+                    <div>
+                        <p style="margin: 0; font-size: 0.8em;font-style:italic;">
+                            Last watched <span id="netflix-title" style="color: #ED254E;">[movie]</span>
+                            , and gave it a rating of <span id="netflix-rating" style="color: #F9DC5C;">[rating]</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <br><br>
+
             <h2>what i do best:</h2>
             <ul>
-                <li>crafting <span style="color: #FF9999;">robust backend systems</span></li>
-                <li>implementing and optimizing <span style="color: #99CCFF;">databases</span> for efficient querying and data management</li>
-                <li><span style="color: #FF9999;">real-time data processing</span> and synchronization</li>
-                <li>turning complex problems into <span style="color: #99FF99;">practical, scalable solutions</span></li>
-                <li><span style="color: #FF9999;">web scraping</span> and automation</li>
+                <li>crafting robust backend systems</li>
+                <li>implementing and optimizing databases for efficient querying and data management</li>
+                <li>real-time data processing and synchronization</li>
+                <li>turning complex problems into practical, scalable solutions</li>
+                <li>web scraping and automation</li>
             </ul>
             
             <h2>ol' reliables:</h2>
             <ul>
-                <li><strong>languages:</strong> <span style="color: #FF9999;">C++</span>, <span style="color: #FF9999;">python</span>, <span style="color: #FF9999;">java</span>, html</li>
-                <li><strong>frameworks:</strong> <span style="color: #FF9999;">flask</span>, <span style="color: #FF9999;">fabric</span></li>
-                <li><strong>libraries:</strong> <span style="color: #FF9999;">selenium</span>, <span style="color: #99FF99;">pillow</span>, <span style="color: #99FF99;">openCV</span>, <span style="color: #99CCFF;">requests</span></li>
-                <li><strong>databases:</strong> <span style="color: #99CCFF;">SQLite</span></li>
-                <li><strong>honourable mentions:</strong> <span style="color: #99CCFF;">api & auth integration</span>, <span style="color: #FF9999;">multithreading</span>, <span style="color: #99CCFF;">json</span>, <span style="color: #FF9999;">web scraping</span>, linux, nginx</li>
+                <li><strong>languages:</strong> C++, python, java, html</li>
+                <li><strong>frameworks:</strong> flask, fabric</li>
+                <li><strong>libraries:</strong> selenium, pillow, openCV, requests</li>
+                <li><strong>databases:</strong> SQLite</li>
+                <li><strong>honourable mentions:</strong> api & auth integration, multithreading, json, web scraping, linux, nginx</li>
             </ul>
             
             <h2>what i'm cooking up:</h2>
             <ul>
-                <li><span style="color: #FF9999;">pharmacy workflow system</span>: secure, 2FA-enabled with a QR oriented workflow <i style="color: #999999;">(Python, React.js, SQLite, nginx)</i></li>
-                <li><span style="color: #99FF99;">spotify visualizer</span>: real-time LED matrix display <i style="color: #999999;">(Python, image processing, Spotipy)</i></li>
-                <li><span style="color: #99CCFF;">minecraft health sync</span>: display in-game health data on a LED matrix powered by Raspberry Pi <i style="color: #999999;">(Java, Python, FabricAPI)</i></li>
-                <li><span style="color: #FF9999;">price tracker</span>: automated web scraper tracking historical product prices and discounts <i style="color: #999999;">(Python, Selenium, SQLite)</i></li>
+                <li>pharmacy workflow system: secure, 2FA-enabled with a QR oriented workflow <i>(Python, React.js, SQLite, nginx)</i></li>
+                <li>spotify visualizer: real-time LED matrix display <i>(Python, image processing, Spotipy)</i></li>
+                <li>minecraft health sync: display in-game health data on a LED matrix powered by Raspberry Pi <i>(Java, Python, FabricAPI)</i></li>
+                <li>price tracker: automated web scraper tracking historical product prices and discounts <i>(Python, Selenium, SQLite)</i></li>
             </ul>
             
             <br><br><p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>.</p>
 
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
+ 
+
+
+
+
+
