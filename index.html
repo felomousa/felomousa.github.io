@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fgm</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
@@ -17,40 +18,37 @@
         </nav>
         <section id="about">
             <br> <br>
-            <h1>hi, i'm felo 👋🏽</h1> 
-            <p>i'm a second-year computer engineering student at simon fraser university, focused on backend development, database systems, and finding unique solutions to everyday problems.</p><br>
+            <h1><span class="highlight" style="color:white">hi, i'm</span> felo 👋🏽</h1>
+            <p>i'm a second-year computer engineering student at simon fraser university, focused on backend development, database systems, and finding unique solutions to everyday problems.</p>
             
 
             <h2>what i've been up to:</h2>
-            <section id="spotify-status">
-                <div class="spotify-card" style="margin-top: -5px; display: flex; align-items: center;">
-                    <img id="album-cover" src="" alt="Album Cover" style="width: 100px; height: 100px; border-radius: 8px; margin-right: 15px;">
-                    <div>
-                        <p style="margin: 0; font-size: 1.2em;">
-                            Last listened to <span id="song-name" style="color: #ED254E; font-weight: bold;">[song]</span> <br>
-                            by <span id="artist-name" style="color: #F9DC5C; font-weight: bold;">[artist]</span> 
-                        </p>
-                        <p style="margin: 0; font-size: 0.9em; color: #999;">
-                            Played <span id="time-ago" style="color: #ed2575; font-weight: bold;">[time ago]</span>
-                        </p>
-                    </div>
+            <br>
+            <section id="spotify-status" class="media-card spotify-card">
+                <img id="album-cover" src="" alt="Album Cover" class="media-image">
+                <div class="media-content">
+                    <h3 class="media-title">last listened to</h3>
+                    <p class="song-info">
+                        <span id="song-name" class="highlight-primary">[song]</span>
+                        <span class="by">by</span><br>
+                        <span id="artist-name" class="highlight-secondary">[artist]</span>
+                    </p>
+                    <p class="time-info">
+                        played <span id="time-ago" class="highlight-tertiary">[time ago]</span>
+                    </p>
                 </div>
             </section>
-
-
-            <section id="netflix-status">
-                <div class="netflix-card" style="border-radius: 12px; margin-top: 10px; display: flex; align-items: center;">
-                    <div>
-                        <p style="margin: 0; font-size: 0.8em;font-style:italic;">
-                            Last watched <span id="netflix-title" style="color: #ED254E;">[movie]</span>
-                            , and gave it a rating of <span id="netflix-rating" style="color: #F9DC5C;">[rating]</span>
-                        </p>
-                    </div>
+            
+            <section id="netflix-status" class="media-card netflix-card">
+                <div class="media-content">
+                    <h3 class="media-title">last watched</h3>
+                    <p class="movie-info">
+                        <span id="netflix-title" class="highlight-primary">[movie]</span><br>
+                        <span id="rating-text">thought it was:</span>
+                        <span id="netflix-rating" class="highlight-secondary">[rating]</span>
+                    </p>
                 </div>
             </section>
-
-            <br><br>
-
             <h2>what i do best:</h2>
             <ul>
                 <li>crafting robust backend systems</li>
@@ -60,24 +58,10 @@
                 <li>web scraping and automation</li>
             </ul>
             
-            <h2>ol' reliables:</h2>
-            <ul>
-                <li><strong>languages:</strong> C++, python, java, html</li>
-                <li><strong>frameworks:</strong> flask, fabric</li>
-                <li><strong>libraries:</strong> selenium, pillow, openCV, requests</li>
-                <li><strong>databases:</strong> SQLite</li>
-                <li><strong>honourable mentions:</strong> api & auth integration, multithreading, json, web scraping, linux, nginx</li>
+           
             </ul>
             
-            <h2>what i'm cooking up:</h2>
-            <ul>
-                <li>pharmacy workflow system: secure, 2FA-enabled with a QR oriented workflow <i>(Python, React.js, SQLite, nginx)</i></li>
-                <li>spotify visualizer: real-time LED matrix display <i>(Python, image processing, Spotipy)</i></li>
-                <li>minecraft health sync: display in-game health data on a LED matrix powered by Raspberry Pi <i>(Java, Python, FabricAPI)</i></li>
-                <li>price tracker: automated web scraper tracking historical product prices and discounts <i>(Python, Selenium, SQLite)</i></li>
-            </ul>
-            
-            <br><br><p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>.</p>
+            <p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>.</p>
 
         </section>
     </div>
