@@ -182,39 +182,3 @@ a:hover {
     color: var(--text-secondary);
     margin-top: -18px;
 }
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 3em;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .media-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .media-image {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 15px;
-    }
-
-    .song-info,
-    .movie-info {
-        font-size: 1.1em;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-}

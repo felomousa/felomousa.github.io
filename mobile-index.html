@@ -14,19 +14,24 @@
         <p class="mobile-subtitle">i'm a second-year computer engineering student at simon fraser university, focused on backend development, database systems, and finding unique solutions to everyday problems.</p>
         
         <section class="mobile-section">
+            <span class="custom-line-break"></span>
             <h2>what i've been up to:</h2>
-            
-            <div class="mobile-media-card">
-                <img id="album-cover" src="" alt="Album Cover" class="mobile-media-image"><br>
-                <div class="mobile-media-content">
-                    <h3 class="mobile-media-title">last listened to</h3>
-                    <p class="mobile-song-info">
-                        <span id="song-name" class="highlight-primary">[song]</span>
-                        <br>
-                        <span id="artist-name" class="highlight-secondary">[artist]</span>
+            <div class="mobile-media-card" style="display: flex; align-items: center; margin-top: 0px;">
+                <img
+                    id="album-cover"
+                    src=""
+                    alt="Album Cover"
+                    class="mobile-media-image"
+                    style="width: 100px; height: 100px; object-fit: cover; margin-right: 20px;"
+                >
+                <div class="mobile-media-content" style="flex: 1;">
+                    <h3 class="mobile-media-title" style="margin: -20px 0 -10px 0;">Last Listened To</h3>
+                    <p class="mobile-song-info" style="margin: 5px 0;">
+                        <span id="song-name" class="highlight-primary">[song]</span> <span class="by">by</span>
+                        <span id="artist-name" class="highlight-secondary" style="display: inline-block;">[artist]</span>
                     </p>
-                    <p class="mobile-time-info">
-                        played <span id="time-ago" class="highlight-tertiary">[time ago]</span>
+                    <p class="mobile-time-info" style="margin: -5px 0 0 0;">
+                        Played <span id="time-ago" class="highlight-tertiary">[time ago]</span>
                     </p>
                 </div>
             </div>
@@ -42,23 +47,33 @@
                     </p>
                 </div>
             </div>
+            <br>
+        </section>
+        <section id="finance-status" class="mobile-media-card netflix-card">
+            <div class="mobile-media-content">
+                <h3 class="mobile-media-title" style="margin-top:30px; margin-bottom:-25px;">Stock Performance</h3>
+                <p class="movie-info">
+                    <span id="finance-title" style="font-weight:bold; font-size: 2.0em;">[finance]</span><br>
+                </p>
+            </div>
         </section>
         
         <section class="mobile-section">
             <h2>what i do best:</h2>
             <ul class="mobile-list">
-                <li>crafting robust backend systems</li>
-                <li>implementing and optimizing databases for efficient querying and data management</li>
-                <li>real-time data processing and synchronization</li>
-                <li>turning complex problems into practical, scalable solutions</li>
+                <li>making robust backend systems</li>
+                <li>implementing and optimizing databases for data management</li>
+                <li>data processing</li>
                 <li>web scraping and automation</li>
+                <li>RESTful APIs</li>
             </ul>
         </section>
         
-        <p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>.</p>
+        <br>
+        <p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>. while your there you might as well check out my <a href="https://www.linkedin.com/in/felomousa" target="_blank">linkedin</a>.</p>
 
         <nav class="mobile-nav">
-            <a href="https://www.linkedin.com/in/felomousa" target="_blank">linkedin</a>
+            
         </nav>
         
     </div>
