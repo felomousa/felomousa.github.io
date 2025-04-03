@@ -1,11 +1,11 @@
 [
     {
-        "title": "FPGA-based HUB75 Dice Display",
-        "description": "Developed a digital dice system using FPGA and HUB75 LED matrix, implementing modular VHDL components for display control and dice logic.",
+        "title": "HUB75 Controller with LED Matrix Demo",
+        "description": "Designed a HUB75 LED matrix controller in VHDL on an FPGA, demonstrated with a dice animation that showcases modular display control, timing, and dice logic.",
         "tags": [
             "VHDL",
-            "FPGA",
-            "DE10",
+            "FPGAs",
+            "Quartus Prime",
             "SignalTap II"
         ],
         "skills": "VHDL,FPGA,DE10,SignalTap II",
@@ -14,13 +14,13 @@
         "details": {
             "overview": "This team project involved creating a digital dice system that displays random dice faces on an LED matrix. The system uses a DE10 FPGA board to control a HUB75-compatible LED matrix, with custom VHDL components handling the display logic and dice state transitions.",
             "features": [
-                "Custom VHDL driver for direct control of HUB75 LED matrix via FPGA GPIO",
+                "Custom VHDL controller for direct management of a HUB75 LED matrix via FPGA GPIO",
                 "Modular VHDL components for clock scaling, dice logic, and display handling",
-                "Finite state machine (FSM) for controlling dice face transitions",
+                "Finite State Machine (FSM) for controlling dice face transitions",
                 "Pseudo-random number generation for dice rolls",
-                "RGB multiplexing for dice face rendering on the display matrix"
+                "RGB multiplexing for dice face rendering onto display matrix"
             ],
-            "challenges": "The main challenges included implementing precise timing for the LED matrix refresh rate, designing an efficient multiplexing system for the RGB LEDs, and creating a reliable pseudo-random number generator for the dice rolls. We used SignalTap II to verify timing and signal integrity throughout the development process."
+            "challenges": "challenges revolved around debugging timing issues that led to flicker and ghosting due to improper RGB latching. used SignalTap II during logic development to troubleshoot timing issues such as misaligned pulses, incorrect bit ordering, and unintended behavior. the biggest takeaway was that careful review of documentation and iterative testing are key to clearing hardware challenges."
         }
     },
     {
