@@ -1,0 +1,107 @@
+[
+    {
+        "title": "FPGA-based HUB75 Dice Display",
+        "description": "Developed a digital dice system using FPGA and HUB75 LED matrix, implementing modular VHDL components for display control and dice logic.",
+        "tags": [
+            "VHDL",
+            "FPGA",
+            "DE10",
+            "SignalTap II"
+        ],
+        "skills": "VHDL,FPGA,DE10,SignalTap II",
+        "demoLink": "#",
+        "githubLink": "#",
+        "details": {
+            "overview": "This team project involved creating a digital dice system that displays random dice faces on an LED matrix. The system uses a DE10 FPGA board to control a HUB75-compatible LED matrix, with custom VHDL components handling the display logic and dice state transitions.",
+            "features": [
+                "Custom VHDL driver for direct control of HUB75 LED matrix via FPGA GPIO",
+                "Modular VHDL components for clock scaling, dice logic, and display handling",
+                "Finite state machine (FSM) for controlling dice face transitions",
+                "Pseudo-random number generation for dice rolls",
+                "RGB multiplexing for dice face rendering on the display matrix"
+            ],
+            "challenges": "The main challenges included implementing precise timing for the LED matrix refresh rate, designing an efficient multiplexing system for the RGB LEDs, and creating a reliable pseudo-random number generator for the dice rolls. We used SignalTap II to verify timing and signal integrity throughout the development process."
+        }
+    },
+    {
+        "title": "Pharmacy Blister-pack Scheduler",
+        "description": "Built a secure scheduling system for pharmacy blister packs using Python, Flask, and SQLite with OTP authentication and automated reporting.",
+        "tags": [
+            "Python",
+            "Flask",
+            "SQLite",
+            "React.js",
+            "Raspberry Pi"
+        ],
+        "skills": "Python,Flask,SQLite,React.js,Raspberry Pi",
+        "demoLink": "#",
+        "githubLink": "#",
+        "details": {
+            "overview": "This project addressed the challenge of scheduling and tracking pharmacy blister pack preparations. The system provides pharmacies with a secure, efficient way to manage patient medication schedules, track preparation status, and generate reports.",
+            "features": [
+                "RESTful API built with Python and Flask for backend operations",
+                "SQLite database for efficient data management and querying",
+                "Password-less registration and login using One-Time Password (OTP) authentication",
+                "React.js frontend for responsive user interface",
+                "Automated report generation for pharmacy management",
+                "User activity tracking for audit purposes"
+            ],
+            "security": [
+                "Rate limiting to prevent brute force attacks",
+                "Google ReCaptcha integration for bot protection",
+                "SQL input sanitization to prevent injection attacks",
+                "Deployed on Raspberry Pi with nginx as reverse proxy",
+                "SSL encryption via Let's Encrypt for secure data transmission"
+            ]
+        }
+    },
+    {
+        "title": "Spotify LED Matrix Integration",
+        "description": "Created a Python-based system to display Spotify song data on a 192×32 LED matrix, with real-time album art processing and progress tracking.",
+        "tags": [
+            "Python",
+            "Flask",
+            "Spotify API",
+            "OpenCV",
+            "PIL"
+        ],
+        "skills": "Python,Flask,OpenCV,PIL",
+        "demoLink": "#",
+        "githubLink": "#",
+        "details": {
+            "overview": "This project integrates the Spotify API with a 192×32 LED matrix display to show real-time information about currently playing music. The system displays song title, artist name, album artwork, and a synchronized progress bar.",
+            "features": [
+                "Spotify API integration to fetch current playback data",
+                "Flask backend for handling API requests and data processing",
+                "OpenCV and PIL for image processing and downscaling album art",
+                "Real-time progress bar synchronized with song playback",
+                "Automatic display updates when songs change"
+            ],
+            "implementation": "The system uses Python to fetch data from Spotify's API and process it for display. Album artwork is downloaded, processed with OpenCV to optimize for the LED matrix's resolution and color capabilities, and then rendered alongside text information. The progress bar updates in real-time based on the song's current playback position."
+        }
+    },
+    {
+        "title": "Parking Availability System",
+        "description": "Developed a real-time parking occupancy monitoring system using OpenCV image processing to detect and classify parking spot availability.",
+        "tags": [
+            "Python",
+            "OpenCV",
+            "Raspberry Pi",
+            "NoIR Camera"
+        ],
+        "skills": "Python,OpenCV,Raspberry Pi",
+        "demoLink": "#",
+        "githubLink": "#",
+        "details": {
+            "overview": "This team project created a system to monitor parking lot occupancy in real-time using computer vision techniques. The system uses cameras to detect whether parking spots are occupied or vacant, providing valuable information for parking management.",
+            "features": [
+                "OpenCV image processing for parking spot detection",
+                "Contour detection algorithms to classify spots as occupied or vacant",
+                "Optimization for low-light conditions using NoIR cameras",
+                "Gaussian blur, edge detection, and dilation for enhanced accuracy",
+                "Deployment on Raspberry Pi for cost-effective implementation"
+            ],
+            "challenges": "The main challenges included developing robust algorithms that could work in varying lighting conditions, accurately defining parking spot boundaries, and optimizing the image processing pipeline to run efficiently on the Raspberry Pi's limited resources. We implemented various image preprocessing techniques to enhance detection accuracy."
+        }
+    }
+]

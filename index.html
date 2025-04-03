@@ -1,82 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fgm</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Felo Mousa | Computer Engineering Student</title>
+  <meta name="description" content="Portfolio of Felo Mousa, a computer engineering student at Simon Fraser University focused on FPGA, embedded systems, and software development.">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <a href="projects.html">projects</a>
-            <a href="https://www.linkedin.com/in/felomousa" target="_blank">linkedin</a>
-            <a href="https://github.com/felomousa/" target="_blank">github</a>
-        </nav>
-        <section id="about">
-            <br> <br>
-            <h1><span class="highlight" style="color:white">hi, i'm</span> <span class="highlight">felo.</span></h1>
-            <p>i'm a second-year computer engineering student at simon fraser university, focused on backend development, database systems, and finding unique solutions to everyday problems.</p>
+  <div class="container">
+    <nav>
+      <a href="https://www.linkedin.com/in/felomousa" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect x="2" y="9" width="4" height="12"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+      </a>
+      <a href="https://github.com/felomousa/" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+        </svg>
+      </a>
+    </nav>
 
-        </section>
-        <h2>what i do best:</h2>
-        <ul>
-            <li>making robust backend systems</li>
-            <li>implementing and optimizing databases for data management</li>
-            <li>data processing</li>
-            <li>web scraping and automation</li>
-            <li>RESTful APIs</li>
-        </ul>   
-        
-        <p>interested in seeing these projects in action? check out my <a href="projects.html">projects</a> or find my <a href="https://github.com/felomousa/" target="_blank">github</a>.</p>
-
+    <section id="about" class="mb-5">
+      <div class="header-content">
+        <h1>felo <span class="name-highlight">mousa</span></h1>
+        <p class="header-subtitle">computer engineering @ simon fraser university</p>
+        <p>
+          I'm a second-year computer engineering student focused on embedded systems, FPGA development, and backend solutions. 
+          I build hardware and software systems that solve real-world problems.
+        </p>
+      </div>
     </section>
 
-            <h2>what i've been up to:</h2>
-            <section id="spotify-status" class="media-card spotify-card">
-                <img id="album-cover" src="" alt="Album Cover" class="media-image">
-                <div class="media-content">
-                    <h3 class="media-title">last listened to</h3>
-                    <p class="song-info">
-                        <span id="song-name" class="highlight-primary">[song]</span>
-                        <span class="by">by</span><br>
-                        <span id="artist-name" class="highlight-secondary">[artist]</span>
-                    </p>
-                    <p class="time-info">
-                        played <span id="time-ago" class="highlight-tertiary">[time ago]</span>
-                    </p>
-                </div>
-            </section>
-            
-            <section id="netflix-status" class="media-card netflix-card">
-                <div class="media-content">
-                    <h3 class="media-title">last watched</h3>
-                    <p class="movie-info">
-                        <span id="netflix-title" class="highlight-primary">[movie]</span><br>
-                        <span id="rating-text">thought it was:</span>
-                        <span id="netflix-rating" class="highlight-secondary">[rating]</span>
-                    </p>
-                </div>
-            </section>
+    <section id="projects">
+      <h2>projects</h2>
+      <div class="skills-container">
+          <span class="skill-tag" data-skill="Python">Python</span>
+          <span class="skill-tag" data-skill="C++">C++</span>
+          <span class="skill-tag" data-skill="VHDL">VHDL</span>
+          <span class="skill-tag" data-skill="Java">Java</span>
+          <span class="skill-tag" data-skill="JavaScript">JavaScript</span>
+          <span class="skill-tag" data-skill="SQL">SQL</span>
+          <span class="skill-tag" data-skill="FPGA">FPGA</span>
+          <span class="skill-tag" data-skill="Raspberry Pi">Raspberry Pi</span>
+          <span class="skill-tag" data-skill="ESP32">ESP32</span>
+        </div>
+      <div id="projects-container" class="projects-container">
+      </div>
+    </section>
+  </div>
 
-            <section id="finance-status" class="media-card netflix-card" style="margin-top:-60px;">
-                <div class="media-content">
-                    <h3 class="media-title">Stock Portfolio</h3>
-                    <p class="movie-info">
-                        <span id="finance-title" style="font-weight:bold; font-size: 1.0em;">[finance]</span><br>
-                    </p>
-                </div>
+<div class="spotify-container">
+    <div class="spotify-card">
+      <img id="album-cover" src="/placeholder.svg" alt="Album Cover" class="spotify-album" />
+      <div class="spotify-info">
+        <div class="spotify-title">NOW PLAYING</div>
+        <div class="spotify-song" id="song-name">Loading...</div>
+        <div class="spotify-artist" id="artist-name"></div>
+        <div class="spotify-time" id="time-ago"></div>
+        <div class="spotify-logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
+              <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+            </svg>
+          </div>                    
+      </div>
     </div>
-    <script src="script.js"></script>
+  </div>
+  
+    <div id="project-modal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Project Title</h3>
+        <button class="modal-close" onclick="closeProjectModal()">×</button>
+      </div>
+      <div class="modal-content">
+        <div class="modal-tags" id="modal-tags">
+        </div>
+        <p class="modal-description" id="modal-description">
+          Project description will appear here.
+        </p>
+        <div id="modal-details">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-button" id="modal-demo-link">View Demo</a>
+        <a href="#" class="modal-button secondary" id="modal-github-link">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
- 
-
-
-
-
 

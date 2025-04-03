@@ -1,6 +1,0 @@
-title: fgm
-description: felo mousa's wicked awesome portfolio 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path
