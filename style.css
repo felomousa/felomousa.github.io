@@ -135,7 +135,6 @@ a:hover {
     color: var(--accent-secondary);
 }
 
-/* updated css for a taller album cover that spans the entire card */
 .spotify-container {
     position: fixed;
     right: 20px;
@@ -587,7 +586,6 @@ body {
     overscroll-behavior-y: contain;
 }
 
-/* Improved gallery layout for differently sized photos */
 .project-image-gallery-container {
     margin-top: 24px;
 }
@@ -600,7 +598,6 @@ body {
     width: 100%;
 }
 
-/* Create a masonry-style layout for images */
 .gallery-row {
     display: flex;
     gap: 16px;
@@ -633,12 +630,10 @@ body {
     transform: scale(1.02);
 }
 
-/* Special styling for GIF images */
 .gallery-item.gif-container img {
     object-fit: contain;
 }
 
-/* Add styles for panoramic images */
 .gallery-item.panoramic {
     width: 100%;
     height: auto;
@@ -652,7 +647,6 @@ body {
     object-fit: cover;
 }
 
-/* Remove the fixed aspect ratio to allow proper image display */
 .project-image-gallery img {
     width: 100%;
     height: auto;
@@ -664,7 +658,6 @@ body {
     cursor: pointer;
 }
 
-/* Make GIFs more prominent in the gallery */
 .project-image-gallery .gif-image {
     grid-column: span 2;
 }
@@ -680,7 +673,6 @@ body {
     margin-bottom: 8px;
 }
 
-/* Add styles for the image lightbox */
 .image-lightbox {
     position: fixed;
     top: 0;
@@ -712,7 +704,6 @@ body {
     justify-content: center;
 }
 
-/* Make the lightbox better for panoramic images */
 .lightbox-image {
     max-width: 90%;
     max-height: 80vh;
@@ -777,7 +768,6 @@ body.lightbox-open {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    /* Responsive adjustments for GIFs */
     .project-image-gallery .gif-image {
         grid-column: span 1;
     }

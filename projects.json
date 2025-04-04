@@ -1,6 +1,6 @@
 [
     {
-        "title": "HUB75 Controller with LED Matrix Demo",
+        "title": "HUB75 Controller for LED Matrices",
         "description": "Designed a HUB75 LED matrix controller in VHDL on an FPGA, demonstrated with a dice animation that showcases modular display control, timing, and dice logic.",
         "tags": [
             "VHDL",

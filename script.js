@@ -1,6 +1,5 @@
-// Consolidate all DOMContentLoaded event listeners into a single function
 document.addEventListener("DOMContentLoaded", () => {
-  // Load projects
+
   fetch("projects.json")
     .then((response) => {
       if (!response.ok) {
@@ -15,14 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading projects:", error)
     })
 
-  // Setup skill tag filtering
   setupSkillTagFiltering()
 
-  // Setup lightbox
   setupImageLightbox()
 })
 
-// Setup skill tag filtering functionality
 function setupSkillTagFiltering() {
   const skillTags = document.querySelectorAll(".skill-tag[data-skill]")
   let activeSkill = null
@@ -55,35 +51,31 @@ function setupSkillTagFiltering() {
   })
 }
 
-// Setup modal event listeners
 document.getElementById("project-modal").addEventListener("click", function (event) {
   if (event.target === this) {
     closeProjectModal()
   }
 })
 
-// Setup keyboard event listeners
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    // Close modal if open
+
     if (document.getElementById("project-modal").classList.contains("active")) {
       closeProjectModal()
     }
-    // Close lightbox if open
+
     if (document.getElementById("image-lightbox")?.classList.contains("active")) {
       closeLightbox()
     }
   }
 })
 
-// Initialize Spotify data
 if (document.getElementById("spotify-status")) {
   setLoadingState("spotify-status", true)
 }
 fetchSpotifyData()
 setInterval(fetchSpotifyData, 5 * 60 * 1000)
 
-// Time formatting utility
 function timeAgo(date) {
   const now = new Date()
   const timePlayed = new Date(date)
@@ -103,7 +95,6 @@ function timeAgo(date) {
   }
 }
 
-// UI state management
 function setLoadingState(elementId, isLoading) {
   const element = document.getElementById(elementId)
   if (element) {
@@ -117,7 +108,6 @@ function setLoadingState(elementId, isLoading) {
   }
 }
 
-// Spotify integration
 function fetchSpotifyData() {
   fetch("https://api.felomousa.com/spotify")
     .then((response) => {
@@ -150,7 +140,6 @@ function fetchSpotifyData() {
     })
 }
 
-// Project loading and rendering
 function loadProjects(projects) {
   const projectsContainer = document.getElementById("projects-container")
   projectsContainer.innerHTML = ""
@@ -160,7 +149,6 @@ function loadProjects(projects) {
     projectCard.className = "project-card"
     projectCard.setAttribute("data-skills", project.skills)
 
-    // Only show GitHub link if it exists and is not "#"
     const githubLinkHtml =
       project.githubLink && project.githubLink !== "#"
         ? `<div class="project-links">
@@ -192,7 +180,6 @@ function loadProjects(projects) {
   })
 }
 
-// Generate HTML for project details
 function generateProjectDetails(details) {
   let html = ""
   if (details.overview) {
@@ -243,7 +230,6 @@ function generateProjectDetails(details) {
   return html
 }
 
-// Modal functionality
 function openProjectModal(button) {
   const projectCard = button.closest(".project-card")
   const projectTitle = projectCard.querySelector(".project-title").textContent
@@ -258,7 +244,6 @@ function openProjectModal(button) {
   document.getElementById("modal-tags").innerHTML = projectTags
   document.getElementById("modal-details").innerHTML = projectDetails
 
-  // Only show GitHub button if link exists and is not "#"
   const githubButton = document.getElementById("modal-github-link")
   if (githubLink && githubLink !== "#") {
     githubButton.href = githubLink
@@ -267,7 +252,6 @@ function openProjectModal(button) {
     githubButton.style.display = "none"
   }
 
-  // Add images to the modal if they exist
   addImagesToModal(projectCard)
 
   const modal = document.getElementById("project-modal")
@@ -281,9 +265,8 @@ function closeProjectModal() {
   document.body.classList.remove("modal-open")
 }
 
-// Lightbox functionality
 function setupImageLightbox() {
-  // Create lightbox elements if they don't exist
+
   if (!document.getElementById("image-lightbox")) {
     const lightbox = document.createElement("div")
     lightbox.id = "image-lightbox"
@@ -296,7 +279,6 @@ function setupImageLightbox() {
         `
     document.body.appendChild(lightbox)
 
-    // Add event listeners for closing the lightbox
     lightbox.addEventListener("click", function (event) {
       if (event.target === this || event.target.classList.contains("lightbox-close")) {
         closeLightbox()
@@ -322,18 +304,16 @@ function closeLightbox() {
   document.body.classList.remove("lightbox-open")
 }
 
-// Image gallery functionality
 function addImagesToModal(projectCard) {
   const projectTitle = projectCard.querySelector(".project-title").textContent
 
-  // Find the project in the projects data
   fetch("projects.json")
     .then((response) => response.json())
     .then((projectsData) => {
       const project = projectsData.find((p) => p.title === projectTitle)
 
       if (project && project.images && project.images.length && project.images[0] !== "#") {
-        // Create or get the image gallery container
+
         let galleryContainer = document.querySelector(".project-image-gallery-container")
 
         if (!galleryContainer) {
@@ -344,25 +324,21 @@ function addImagesToModal(projectCard) {
           galleryContainer.innerHTML = ""
         }
 
-        // Add gallery title
         const galleryTitle = document.createElement("h4")
         galleryTitle.className = "project-detail-title"
         galleryTitle.textContent = "Gallery"
         galleryContainer.appendChild(galleryTitle)
 
-        // Create gallery container
         const gallery = document.createElement("div")
         gallery.className = "project-image-gallery"
         galleryContainer.appendChild(gallery)
 
-        // Filter out placeholder images
         const validImages = project.images.filter((img) => img !== "#")
 
-        // Check if this is the Parking Availability System project (special handling for panoramic images)
         const isParkingProject = project.title.includes("Parking")
 
         if (isParkingProject) {
-          // For parking project, display images full width
+
           validImages.forEach((imgSrc, index) => {
             const imgContainer = document.createElement("div")
             imgContainer.className = "gallery-item panoramic"
@@ -387,12 +363,11 @@ function addImagesToModal(projectCard) {
             gallery.appendChild(imgContainer)
           })
         } else {
-          // For other projects, use the 2-column layout
+
           for (let i = 0; i < validImages.length; i += 2) {
             const row = document.createElement("div")
             row.className = "gallery-row"
 
-            // Add first image in row
             const item1 = document.createElement("div")
             item1.className = "gallery-item"
             const isGif1 = validImages[i].toLowerCase().endsWith(".gif")
@@ -412,7 +387,6 @@ function addImagesToModal(projectCard) {
             item1.appendChild(img1)
             row.appendChild(item1)
 
-            // Add second image if it exists
             if (i + 1 < validImages.length) {
               const item2 = document.createElement("div")
               item2.className = "gallery-item"
@@ -443,4 +417,3 @@ function addImagesToModal(projectCard) {
       console.error("Error loading project images:", error)
     })
 }
-
