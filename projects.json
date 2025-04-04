@@ -64,9 +64,8 @@
         "tags": [
             "Python",
             "Flask",
-            "Spotify API",
-            "OpenCV",
-            "PIL"
+            "APIs",
+            "OpenCV"
         ],
         "skills": "Python,Flask,OpenCV,PIL",
         "images": [
@@ -93,8 +92,7 @@
         "tags": [
             "Python",
             "OpenCV",
-            "Raspberry Pi",
-            "NoIR Camera"
+            "Raspberry Pi"
         ],
         "skills": "Python,OpenCV,Raspberry Pi",
         "images": [
