@@ -70,30 +70,30 @@
       </div>
     </div>
   </div>
-  
-    <div id="project-modal" class="modal-overlay">
+
+  <div id="project-modal" class="modal-overlay">
     <div class="modal-container">
       <div class="modal-header">
         <h3 class="modal-title" id="modal-title">Project Title</h3>
         <button class="modal-close" onclick="closeProjectModal()">×</button>
       </div>
       <div class="modal-content">
-        <div class="modal-tags" id="modal-tags">
-        </div>
-        <p class="modal-description" id="modal-description">
-          Project description will appear here.
-        </p>
-        <div id="modal-details">
-        </div>
+        <div class="modal-tags" id="modal-tags"></div>
+        <p class="modal-description" id="modal-description">Project description will appear here.</p>
+        <div id="modal-details"></div>
       </div>
       <div class="modal-footer">
-        <a href="#" class="modal-button" id="modal-demo-link">View Demo</a>
         <a href="#" class="modal-button secondary" id="modal-github-link">GitHub</a>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
+  <script>
+    // This ensures the lightbox functions are available globally
+    window.openLightbox = openLightbox;
+    window.closeLightbox = closeLightbox;
+  </script>
 </body>
 </html>
 
